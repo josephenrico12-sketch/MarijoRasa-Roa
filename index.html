@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katalog Marijo Rasa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE quiet, premium food boutique
+   IDEA a small-batch gourmet label: dark glass shelf, one warm light, a red cap
+   PICTURE the product photograph, large and uncluttered, its dark ground melting into the page
+   COLOUR near-black ground matching the photo, warm white ink, chili red accent only
+   TYPE Fraunces + Manrope
+   LAYOUT title across the top, photograph full width beneath; phone: title, photo, button */
+:root{color-scheme:dark;--bg:#100d0d;--bg2:#171313;--ink:#f4ede6;--mute:#b3a69c;--line:rgba(244,237,230,.12);--red:#d9232d;--red2:#b81a23;--wa:#1fa855}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Manrope,system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:max(5vw,16px)}
+.serif{font-family:Fraunces,Georgia,serif;font-weight:500;letter-spacing:-.02em}
+section{padding-block:clamp(56px,8vw,112px)}
+.rule{border-top:1px solid var(--line)}
+h2{font-size:clamp(30px,4vw,44px);line-height:1.08;margin:0 0 14px;text-wrap:balance}
+.kick{color:var(--red);font-weight:600;font-size:15px;margin:0 0 10px}
+.lead{color:var(--mute);max-width:52ch;margin:0}
+nav{position:sticky;top:0;z-index:20;background:rgba(16,13,13,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.logo{font-family:Fraunces,Georgia,serif;font-size:22px;font-weight:600;text-decoration:none;margin-right:auto;letter-spacing:-.01em}
+.logo span{color:var(--red)}
+nav .links{display:flex;gap:26px;font-size:15px;color:var(--mute)}
+nav .links a{text-decoration:none}
+nav .links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 24px;border-radius:999px;font:600 15px Manrope,sans-serif;text-decoration:none;border:0;cursor:pointer;white-space:nowrap;transition:background .2s,color .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.primary{background:var(--red);color:#fff}
+.primary:hover{background:var(--red2)}
+.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px rgba(244,237,230,.35)}
+.line:hover{box-shadow:inset 0 0 0 1px var(--ink)}
+.sm{min-height:40px;padding:0 18px;font-size:14px}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.hero{padding-block:clamp(48px,7vw,96px) 0;text-align:center}
+.hero .tag{display:inline-flex;gap:10px;align-items:center;color:var(--mute);font-size:15px;margin-bottom:18px}
+.hero .tag::before,.hero .tag::after{content:"";width:28px;height:1px;background:var(--red)}
+.hero h1{font-size:clamp(44px,7vw,84px);line-height:1.02;margin:0 auto 18px;max-width:14ch;font-weight:400}
+.hero h1 em{font-style:italic;font-weight:400}
+.hero p{color:var(--mute);font-size:18px;max-width:46ch;margin:0 auto 30px}
+.acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.shot{margin-top:clamp(40px,6vw,72px);position:relative}
+.shot img{width:100%;height:auto;border-radius:4px}
+.shot::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts div{padding:26px 0;text-align:center}
+.facts div+div{border-left:1px solid var(--line)}
+.facts b{display:block;font-family:Fraunces,Georgia,serif;font-weight:500;font-size:26px;white-space:nowrap}
+.facts span{color:var(--mute);font-size:14px}
+.prod{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:clamp(28px,6vw,88px);align-items:center}
+.prod .pic{background:var(--bg2);border-radius:4px;overflow:hidden;aspect-ratio:380/500}
+.prod .pic img{width:100%;height:100%;object-fit:cover}
+.prod h3{font-size:clamp(30px,3.6vw,40px);line-height:1.1;margin:0 0 8px}
+.prod .pp{font-family:Fraunces,Georgia,serif;font-size:28px;margin:0 0 18px;white-space:nowrap}
+.prod .pp small{font-family:Manrope,sans-serif;font-size:14px;color:var(--mute);margin-left:6px}
+.prod .desc{color:var(--mute);margin:0 0 24px;max-width:46ch}
+dl{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:10px 28px;margin:0 0 28px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:15px}
+dt{color:var(--mute)}
+dd{margin:0}
+.buy{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px}
+.qty button{width:44px;height:46px;border:0;background:transparent;color:var(--ink);font-size:20px;cursor:pointer;border-radius:999px}
+.qty button:hover{color:var(--red)}
+.qty output{min-width:28px;text-align:center;font-weight:600;font-variant-numeric:tabular-nums}
+.tot{color:var(--mute);font-size:14px;margin-top:14px}
+.tot b{color:var(--ink);font-weight:600}
+.note{margin-top:22px;font-size:15px;color:var(--mute)}
+.note a{color:var(--ink);text-underline-offset:3px}
+.pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,6vw,88px);align-items:end}
+.pair blockquote{margin:0;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:clamp(24px,3vw,32px);line-height:1.3;font-weight:400}
+.pair ul{list-style:none;padding:0;margin:0;display:grid;gap:0}
+.pair li{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.pair li span{color:var(--mute);font-size:14px}
+.order{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:start;margin-top:40px}
+.steps{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:18px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:36px minmax(0,1fr);gap:14px;counter-increment:s}
+.steps li::before{content:counter(s);width:32px;height:32px;border-radius:50%;border:1px solid var(--red);color:var(--red);display:grid;place-items:center;font-size:14px;font-weight:600}
+.steps b{display:block;font-weight:600}
+.steps span{color:var(--mute);font-size:15px}
+form{display:grid;gap:18px}
+label{display:grid;gap:8px;font-size:14px;color:var(--mute)}
+input,textarea{font:inherit;font-size:16px;color:var(--ink);background:transparent;border:0;border-bottom:1px solid rgba(244,237,230,.25);padding:8px 0 10px;width:100%;border-radius:0}
+input:focus,textarea:focus{outline:none;border-bottom-color:var(--red)}
+input::placeholder,textarea::placeholder{color:#6f645c}
+textarea{min-height:72px;resize:vertical}
+.two{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:20px}
+.preview{background:var(--bg2);border:1px solid var(--line);border-radius:6px;padding:24px;margin-top:6px}
+.preview p{margin:0 0 12px;font-size:14px;color:var(--mute)}
+.bubble{background:#1d3a2a;color:#eaf6ee;border-radius:12px 12px 12px 3px;padding:14px 16px;white-space:pre-wrap;font-size:14.5px;line-height:1.55;overflow-wrap:anywhere;margin-bottom:18px}
+.preview .btn{width:100%}
+.contact{text-align:center}
+.contact h2{margin-bottom:10px}
+.chans{display:grid;grid-template-columns:repeat(2,minmax(0,280px));justify-content:center;gap:16px;margin-top:36px}
+.chan{display:flex;gap:14px;align-items:center;text-align:left;text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:18px 20px;transition:border-color .2s}
+.chan:hover{border-color:var(--red)}
+.chan svg{width:28px;height:28px;flex:none;color:var(--red)}
+.chan small{display:block;color:var(--mute);font-size:13px}
+.chan b{font-weight:600;white-space:nowrap}
+footer{border-top:1px solid var(--line);color:var(--mute);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:22px}
+.float{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.float svg{width:28px;height:28px;color:#fff}
+.hero h1,.hero p,.hero .acts{animation:up .9s ease both}
+.hero p{animation-delay:.1s}.hero .acts{animation-delay:.2s}
+@keyframes up{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hero h1,.hero p,.hero .acts{animation:none}html{scroll-behavior:auto}}
+@media(max-width:820px){.prod,.pair,.order{grid-template-columns:minmax(0,1fr)}.prod .pic{max-width:420px}nav .links{display:none}}
+@media(max-width:560px){.facts{grid-template-columns:minmax(0,1fr)}.facts div+div{border-left:0;border-top:1px solid var(--line)}.facts div{padding:18px 0}.chans{grid-template-columns:minmax(0,1fr)}.two{grid-template-columns:minmax(0,1fr)}.hero{text-align:left}.hero .tag::before{display:none}.acts{justify-content:flex-start}.hero h1,.hero p{margin-left:0}}
+.prods{display:grid;gap:clamp(56px,8vw,104px)}
+.prod:nth-child(even) .pic{order:2}
+.soldout{display:inline-block;font-size:13px;font-weight:600;color:var(--red);border:1px solid var(--red);border-radius:999px;padding:2px 10px;margin-left:10px;vertical-align:middle}
+select{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:0;border-bottom:1px solid rgba(244,237,230,.25);padding:8px 0 10px;width:100%;border-radius:0}
+select:focus{outline:none;border-bottom-color:var(--red)}
+.loading [data-c]:empty{min-height:1em}
+@media(max-width:820px){.prod:nth-child(even) .pic{order:0}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5 2.4 3.6 5.8 5c2.2.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5s.3-1.3.2-1.5-.3-.2-.6-.4z"/></symbol>
+<symbol id="ig" viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" rx="7" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="16" cy="16" r="5.6" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="23" cy="9" r="1.6" fill="currentColor"/></symbol>
+</defs></svg>
+
+<nav aria-label="Navigasi utama"><div class="wrap">
+<a class="logo" href="#top"><span data-c="brand">Marijo Rasa</span><span>.</span></a>
+<div class="links"><a href="#produk">Produk</a><a href="#pesan">Cara pesan</a><a href="#kontak">Kontak</a></div>
+<a class="btn line sm" data-wa="Halo {brand}, saya mau tanya soal produknya." href="#"><svg><use href="#wa"/></svg>Chat</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div class="tag" data-c="hero.label">Asli Manado</div>
+<h1 class="serif" data-c="hero.title">Sambal Roa, dari dapur Manado</h1>
+<p data-c="hero.subtitle"></p>
+<div class="acts">
+<a class="btn primary" id="heroBtn" href="#"><svg><use href="#wa"/></svg><span data-c="hero.button">Pesan via WhatsApp</span></a>
+<a class="btn line" href="#produk">Lihat produk</a>
+</div>
+<div class="shot"><img id="heroImg" alt="Foto produk" width="1254" height="890"></div>
+<div class="facts" id="facts"></div>
+</div></header>
+
+<section id="produk"><div class="wrap">
+<div class="prods" id="prods"></div>
+<p class="note" style="margin-top:48px"><span data-c="wholesale_note"></span> <a data-wa="Halo {brand}, saya tertarik pesan dalam jumlah banyak / jadi reseller. Boleh info harganya?" href="#">Tanya harga grosir</a></p>
+</div></section>
+
+<section class="rule"><div class="wrap pair">
+<div>
+<p class="kick">Cara menikmati</p>
+<blockquote data-c="pairing.quote"></blockquote>
+</div>
+<ul id="pairs"></ul>
+</div></section>
+
+<section class="rule" id="pesan"><div class="wrap">
+<p class="kick">Cara pesan</p>
+<h2 class="serif">Pesan dalam satu pesan WhatsApp</h2>
+<p class="lead">Isi data singkat di bawah. Pesan pesanan akan tersusun otomatis, tinggal kirim.</p>
+<div class="order">
+<div>
+<form id="f" novalidate>
+<div class="two">
+<label for="prod">Produk<select id="prod"></select></label>
+<label for="jml">Jumlah<input id="jml" type="number" min="1" value="1" inputmode="numeric"></label>
+</div>
+<label for="nama">Nama<input id="nama" autocomplete="name" placeholder="Nama lengkap"></label>
+<label for="alamat">Alamat pengiriman<textarea id="alamat" autocomplete="street-address" placeholder="Jalan, kelurahan, kota, kode pos"></textarea></label>
+<label for="cat">Catatan (opsional)<input id="cat" placeholder="Contoh: kirim hari Sabtu"></label>
+</form>
+<ol class="steps">
+<li><div><b>Isi data pesanan</b><span>Produk, jumlah, nama, dan alamat.</span></div></li>
+<li><div><b>Kirim lewat WhatsApp</b><span>Pesan sudah terisi, tinggal tekan kirim.</span></div></li>
+<li><div><b>Konfirmasi dan bayar</b><span>Admin membalas dengan ongkir dan cara pembayaran.</span></div></li>
+</ol>
+</div>
+<div class="preview" aria-live="polite">
+<p>Pratinjau pesan</p>
+<div class="bubble" id="msg"></div>
+<a class="btn primary" id="send" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Kirim pesanan via WhatsApp</a>
+</div>
+</div>
+</div></section>
+
+<section class="rule contact" id="kontak"><div class="wrap">
+<p class="kick">Kontak</p>
+<h2 class="serif">Ada pertanyaan? Sapa kami.</h2>
+<p class="lead" style="margin-inline:auto" data-c="contact.intro"></p>
+<div class="chans">
+<a class="chan" data-wa="Halo {brand}!" href="#"><svg><use href="#wa"/></svg><span><small>WhatsApp</small><b data-c="contact.whatsapp_display"></b></span></a>
+<a class="chan" id="igLink" href="#" target="_blank" rel="noopener"><svg><use href="#ig"/></svg><span><small>Instagram</small><b id="igText"></b></span></a>
+</div>
+</div></section>
+
+<footer><div class="wrap"><span>© <span id="yr">2026</span> <span data-c="brand"></span></span><span data-c="footer"></span></div></footer>
+
+<a class="float" data-wa="Halo {brand}, saya mau pesan." href="#" aria-label="Chat WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script id="fallback" type="application/json">{"brand": "Marijo Rasa", "hero": {"label": "Asli Manado", "title": "Sambal Roa, dari dapur Manado", "subtitle": "Dibuat dari asli daging ikan roa. Pedas, gurih, dan rasa lezatnya dijamin bikin nagih.", "image": "/images/produk.jpg", "button": "Pesan via WhatsApp"}, "facts": [{"value": "Rp35.000", "label": "per toples"}, {"value": "Daging roa", "label": "bahan utama asli"}, {"value": "Asli Manado", "label": "cita rasa khas"}], "products": [{"name": "Sambal Roa Marijo Rasa", "price": 35000, "unit": "toples", "description": "Sambal khas Manado dari asli daging ikan roa. Cukup satu sendok untuk teman bubur Manado, nasi hangat, telur, atau gorengan.", "image": "/images/thumb.jpg", "available": true, "details": [{"label": "Bahan utama", "value": "Asli daging ikan roa"}, {"label": "Rasa", "value": "Pedas dan gurih"}, {"label": "Kemasan", "value": "Toples bertutup merah"}]}], "wholesale_note": "Pesan dalam jumlah banyak, hampers, atau ingin jadi reseller?", "pairing": {"quote": "Paling nikmat di atas semangkuk bubur Manado yang masih hangat.", "items": [{"name": "Bubur Manado", "note": "pasangan terbaik"}, {"name": "Nasi hangat & telur", "note": "sehari-hari"}, {"name": "Gorengan", "note": "teman ngemil"}, {"name": "Ikan atau ayam bakar", "note": "pelengkap lauk"}]}, "contact": {"whatsapp": "6282122312502", "whatsapp_display": "0821 2231 2502", "instagram": "marijorasa25", "intro": "Tanya stok, pesan, atau ikuti update terbaru Marijo Rasa."}, "footer": "Sambal Roa · Asli Manado"}</script>
+<script>
+{
+const $=id=>document.getElementById(id);
+const rp=n=>'Rp'+(Number(n)||0).toLocaleString('id-ID');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const get=(o,p)=>p.split('.').reduce((a,k)=>a==null?a:a[k],o);
+const img=src=>{src=String(src||'');if(/^https:\/\//.test(src))return src;if(/^[\w\/.\-]+$/.test(src))return src.replace(/^\/+/,'');return ''};
+let C={},Q=[];
+const link=t=>'https://wa.me/'+String(C.contact?.whatsapp||'').replace(/\D/g,'')+'?text='+encodeURIComponent(t);
+const prods=()=>(C.products||[]).filter(p=>p&&p.name);
+const msgFor=(p,n)=>`Halo ${C.brand}, saya mau pesan:\n• ${p.name} × ${n} ${p.unit||'pcs'} = ${rp(p.price*n)}`;
+const tail='\n\nMohon info ongkir dan cara pembayarannya. Terima kasih!';
+
+function render(){
+  document.title='Katalog '+(C.brand||'');
+  for(const el of document.querySelectorAll('[data-c]'))el.textContent=get(C,el.dataset.c)??'';
+  for(const a of document.querySelectorAll('[data-wa]')){a.href=link(a.dataset.wa.replace('{brand}',C.brand||''));a.target='_blank';a.rel='noopener';}
+  const P=prods(),first=P.find(p=>p.available!==false)||P[0];
+  $('heroBtn').href=link(first?msgFor(first,1)+tail:'Halo '+C.brand);$('heroBtn').target='_blank';
+  $('heroImg').src=img(C.hero?.image);$('heroImg').alt=(C.hero?.title||'')+' – foto produk';
+  $('facts').innerHTML=(C.facts||[]).map(f=>`<div><b>${esc(f.value)}</b><span>${esc(f.label)}</span></div>`).join('');
+  $('facts').style.gridTemplateColumns=`repeat(${Math.max(1,(C.facts||[]).length)},minmax(0,1fr))`;
+  Q=P.map(()=>1);
+  $('prods').innerHTML=P.map((p,i)=>{const off=p.available===false;return `<article class="prod">
+<div class="pic">${img(p.image)?`<img src="${esc(img(p.image))}" alt="${esc(p.name)}" loading="lazy">`:''}</div>
+<div>${i===0?'<p class="kick">Produk kami</p>':''}
+<h3 class="serif">${esc(p.name)}${off?'<span class="soldout">Stok habis</span>':''}</h3>
+<p class="pp">${rp(p.price)}<small>/ ${esc(p.unit||'pcs')}</small></p>
+<p class="desc">${esc(p.description)}</p>
+${(p.details||[]).length?`<dl>${p.details.map(d=>`<dt>${esc(d.label)}</dt><dd>${esc(d.value)}</dd>`).join('')}</dl>`:''}
+${off?`<a class="btn line" target="_blank" rel="noopener" href="${esc(link(`Halo ${C.brand}, kapan ${p.name} tersedia lagi?`))}">Tanya ketersediaan</a>`:
+`<div class="buy"><div class="qty" data-i="${i}"><button type="button" data-d="-1" aria-label="Kurangi">−</button><output id="q${i}">1</output><button type="button" data-d="1" aria-label="Tambah">+</button></div>
+<a class="btn primary" id="b${i}" href="#" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Pesan via WhatsApp</a></div>
+<div class="tot">Total <b id="t${i}"></b> · belum termasuk ongkir</div>`}
+</div></article>`}).join('');
+  P.forEach((p,i)=>{if(p.available!==false)upd(i)});
+  $('pairs').innerHTML=(C.pairing?.items||[]).map(x=>`<li>${esc(x.name)} <span>${esc(x.note)}</span></li>`).join('');
+  const ig=String(C.contact?.instagram||'').replace(/^@/,'').replace(/[^\w.]/g,'');
+  $('igLink').href='https://instagram.com/'+ig;$('igText').textContent='@'+ig;
+  $('prod').innerHTML=P.map((p,i)=>p.available===false?'':`<option value="${i}">${esc(p.name)} (${rp(p.price)})</option>`).join('');
+  $('yr').textContent=new Date().getFullYear();
+  build();
+}
+function upd(i){const p=prods()[i];$('q'+i).textContent=Q[i];$('t'+i).textContent=rp(p.price*Q[i]);$('b'+i).href=link(msgFor(p,Q[i])+tail);}
+function build(){const p=prods()[+$('prod').value||0];if(!p){$('msg').textContent='';return}
+  const n=Math.max(1,parseInt($('jml').value)||1);
+  let t=msgFor(p,n)+`\n\nNama: ${$('nama').value.trim()||'-'}\nAlamat: ${$('alamat').value.trim()||'-'}`;
+  if($('cat').value.trim())t+=`\nCatatan: ${$('cat').value.trim()}`;
+  t+=tail;$('msg').textContent=t;$('send').href=link(t);}
+$('prods').addEventListener('click',e=>{const b=e.target.closest('.qty button');if(!b)return;const i=+b.parentElement.dataset.i;Q[i]=Math.max(1,Math.min(99,Q[i]+Number(b.dataset.d)));upd(i);});
+$('f').addEventListener('input',build);
+$('f').addEventListener('submit',e=>e.preventDefault());
+try{C=JSON.parse($('fallback').textContent)}catch(e){C={}}
+render();
+fetch('content.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(d=>{if(d&&typeof d==='object'){C=d;render();}}).catch(()=>{});
+}
+</script>
+</body>
+</html>

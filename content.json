@@ -1,0 +1,47 @@
+{
+  "brand": "Marijo Rasa",
+  "hero": {
+    "label": "Asli Manado",
+    "title": "Sambal Roa, dari dapur Manado",
+    "subtitle": "Dibuat dari asli daging ikan roa. Pedas, gurih, dan rasa lezatnya dijamin bikin nagih.",
+    "image": "/images/produk.jpg",
+    "button": "Pesan via WhatsApp"
+  },
+  "facts": [
+    { "value": "Rp35.000", "label": "per toples" },
+    { "value": "Daging roa", "label": "bahan utama asli" },
+    { "value": "Asli Manado", "label": "cita rasa khas" }
+  ],
+  "products": [
+    {
+      "name": "Sambal Roa Marijo Rasa",
+      "price": 35000,
+      "unit": "toples",
+      "description": "Sambal khas Manado dari asli daging ikan roa. Cukup satu sendok untuk teman bubur Manado, nasi hangat, telur, atau gorengan.",
+      "image": "/images/thumb.jpg",
+      "available": true,
+      "details": [
+        { "label": "Bahan utama", "value": "Asli daging ikan roa" },
+        { "label": "Rasa", "value": "Pedas dan gurih" },
+        { "label": "Kemasan", "value": "Toples bertutup merah" }
+      ]
+    }
+  ],
+  "wholesale_note": "Pesan dalam jumlah banyak, hampers, atau ingin jadi reseller?",
+  "pairing": {
+    "quote": "Paling nikmat di atas semangkuk bubur Manado yang masih hangat.",
+    "items": [
+      { "name": "Bubur Manado", "note": "pasangan terbaik" },
+      { "name": "Nasi hangat & telur", "note": "sehari-hari" },
+      { "name": "Gorengan", "note": "teman ngemil" },
+      { "name": "Ikan atau ayam bakar", "note": "pelengkap lauk" }
+    ]
+  },
+  "contact": {
+    "whatsapp": "6282122312502",
+    "whatsapp_display": "0821 2231 2502",
+    "instagram": "marijorasa25",
+    "intro": "Tanya stok, pesan, atau ikuti update terbaru Marijo Rasa."
+  },
+  "footer": "Sambal Roa · Asli Manado"
+}

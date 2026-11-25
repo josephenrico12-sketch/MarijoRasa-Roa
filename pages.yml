@@ -1,0 +1,130 @@
+media:
+  input: images
+  output: /images
+
+content:
+  - name: website
+    label: Isi Website Marijo Rasa
+    type: file
+    path: content.json
+    fields:
+      - name: brand
+        label: Nama brand
+        type: string
+
+      - name: hero
+        label: Bagian atas (hero)
+        type: object
+        fields:
+          - name: label
+            label: Label kecil di atas judul
+            type: string
+          - name: title
+            label: Judul utama
+            type: string
+          - name: subtitle
+            label: Kalimat pembuka
+            type: text
+          - name: image
+            label: Foto utama (disarankan lebar, mis. 1254 x 890 px)
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+          - name: button
+            label: Teks tombol pesan
+            type: string
+
+      - name: facts
+        label: Info singkat di bawah foto
+        type: object
+        list: true
+        fields:
+          - name: value
+            label: Angka / teks besar
+            type: string
+          - name: label
+            label: Keterangan
+            type: string
+
+      - name: products
+        label: Produk (katalog)
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Nama produk
+            type: string
+          - name: price
+            label: Harga (angka saja, mis. 35000)
+            type: number
+          - name: unit
+            label: Satuan (mis. toples, botol, paket)
+            type: string
+          - name: description
+            label: Deskripsi
+            type: text
+          - name: image
+            label: Foto produk (disarankan tegak, mis. 380 x 500 px)
+            type: image
+            options:
+              extensions: [jpg, jpeg, png, webp]
+              rename: safe
+          - name: available
+            label: Stok tersedia
+            type: boolean
+          - name: details
+            label: Detail produk
+            type: object
+            list: true
+            fields:
+              - name: label
+                label: Nama detail (mis. Rasa)
+                type: string
+              - name: value
+                label: Isi detail (mis. Pedas dan gurih)
+                type: string
+
+      - name: wholesale_note
+        label: Kalimat ajakan grosir / reseller
+        type: string
+
+      - name: pairing
+        label: Bagian "Cara menikmati"
+        type: object
+        fields:
+          - name: quote
+            label: Kalimat utama
+            type: text
+          - name: items
+            label: Daftar makanan pendamping
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Makanan
+                type: string
+              - name: note
+                label: Keterangan
+                type: string
+
+      - name: contact
+        label: Kontak
+        type: object
+        fields:
+          - name: whatsapp
+            label: Nomor WhatsApp untuk link (format 62..., tanpa + dan spasi, mis. 6282122312502)
+            type: string
+          - name: whatsapp_display
+            label: Nomor WhatsApp yang ditampilkan (mis. 0821 2231 2502)
+            type: string
+          - name: instagram
+            label: Username Instagram (tanpa @)
+            type: string
+          - name: intro
+            label: Kalimat di bagian kontak
+            type: text
+
+      - name: footer
+        label: Teks footer
+        type: string
